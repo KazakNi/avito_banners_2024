@@ -1,6 +1,10 @@
 package config
 
-import "github.com/ilyakaznacheev/cleanenv"
+import (
+	"fmt"
+
+	"github.com/ilyakaznacheev/cleanenv"
+)
 
 type AppConfig struct {
 	Database struct {
@@ -25,8 +29,9 @@ type AppConfig struct {
 var Cfg AppConfig
 
 func LoadConfig() {
-	err := cleanenv.ReadConfig("../config/config.yaml", &Cfg)
+	err := cleanenv.ReadConfig("./config.yaml", &Cfg)
 	if err != nil {
+		fmt.Println(err)
 		panic("Can't load config data")
 	}
 }
