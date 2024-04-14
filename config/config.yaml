@@ -1,0 +1,13 @@
+database:
+  driver: postgres
+  host: localhost
+  port: 5432
+  user: postgres
+  password: unga1993
+  dbname: postgres
+server:
+  host: localhost
+  port: 8080
+token:
+  secret: sdfkl3lskdflk32kalsdkf1
+  salt: KsdfIHSFE314s
